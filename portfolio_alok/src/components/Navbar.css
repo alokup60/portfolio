@@ -1,0 +1,32 @@
+.moon {
+  transform: rotateX(40deg);
+  transform: rotateZ(-25deg);
+  cursor: pointer;
+}
+.nav-links ul li:hover {
+  color: #683afa;
+  transition: all 0.3s ease-in;
+}
+.nav-links .contactBtn:hover {
+  background-color: #683afa;
+  transition: all 0.3s ease-in;
+}
+.navbar {
+}
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  background-color: #c7e5dc;
+}
+
+@keyframes stickyHeader {
+  0% {
+    transform: translateY(-80px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
