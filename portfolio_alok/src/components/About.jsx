@@ -42,7 +42,7 @@ export default function About() {
           </div>
           <div className="flex justify-center items-center bg-textBlack text-textWhite px-[1.5rem] py-[0.6rem] rounded-md hover:bg-highColor transition-all delay-75 ease-in cursor-pointer text-center mt-[4rem] gap-4">
             <CiLocationArrow1 />
-            <a href="/resumeN.pdf" download="resumeN.pdf">
+            <a href="/resumeN.pdf" download="resume.pdf">
               Download CV
             </a>
           </div>

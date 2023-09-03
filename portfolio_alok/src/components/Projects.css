@@ -2,3 +2,15 @@
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   background-color: #d9d9d9;
 }
+@media screen and (max-width: 850px) {
+  .cards {
+    flex-direction: column;
+    gap: 18px;
+  }
+  .card {
+    width: 100%;
+  }
+  .card-border {
+    width: 100%;
+  }
+}
