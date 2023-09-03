@@ -1,0 +1,85 @@
+<!-- <nav className="max-w-[90%] flex justify-between items-center mx-auto">
+        <div className="logo w-[5rem]  flex justify-center items-center ">
+          <img src={logo} className="object-fit" alt="Logo" />
+          <span className="pl-[1rem] text-xl">Alok</span>
+        </div>
+
+        <div className="flex items-center gap-6 nav-links">
+          {/* Navigation Links */}
+          <ul className={`flex items-center gap-6 `}>
+            <li className="px-[1rem] nav-items">
+              <a href="#home">Home</a>
+            </li>
+            <li className="px-[1rem] nav-items">
+              <a href="#about">About Me</a>
+            </li>
+            <li className="px-[1rem] nav-items">
+              <a href="#project">Projects</a>
+            </li>
+          </ul>
+          {/* Contact Button */}
+          {/* <div className="bg-textBlack text-textWhite px-[1.5rem] py-[0.6rem] rounded-md contactBtn hover:bg-highColor transition-all delay-75 ease-in">
+            <button>Contact Me</button>
+          </div> */}
+        </div>
+      </nav>
+      {/* Mobile Menu */}
+      {/* <div
+        className={`md:hidden mobile-menu ${
+          mobileMenuOpen ? "mobile-menu-open" : ""
+        }`}
+      >
+        <ul className="flex flex-col items-center gap-4">
+          <li>
+            <a href="#home">Home</a>
+          </li>
+          <li>
+            <a href="#about">About Me</a>
+          </li>
+          <li>
+            <a href="#project">Projects</a>
+          </li>
+        </ul>
+        {/* You can add additional mobile menu items here */}
+      {/* </div>  */} -->
+<!-- {
+  /* <div className="text-3xl cursor-pointer" onClick={toggleMenu}>
+  <MdOutlineNightlight />
+</div>; */
+}
+{
+  /* <ul
+            className={`hidden md:flex items-center gap-6 ${
+              mobileMenuOpen ? "mobile-menu-open" : ""
+            }`}
+          ></ul> */
+} -->
+
+<!-- ----------------------------- -->
+<!-- <div className="flex items-center gap-4 pr-4">
+          <div>
+            <ul
+              className={`flex gap-8 ${
+                clicked ? "nav-menu " : "nav-menu active"
+              }`}
+            >
+              {MenuData.map((item, index) => {
+                return (
+                  <li key={index}>
+                    <a href={item.url} className={item.cName}>
+                      {item.title}
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+          <div className="moon text-2xl">
+            <MdOutlineNightlight />
+          </div>
+          <div className="menu-icons text-2xl">
+            <button onClick={MenuHandler} className={`bars`}>
+              {menu ? <AiOutlineClose /> : <FaBars />}
+            </button>
+          </div>
+        </div> -->

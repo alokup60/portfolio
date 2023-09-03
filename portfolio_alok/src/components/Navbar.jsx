@@ -1,11 +1,20 @@
 import React, { useState, useEffect } from "react";
 import "./Navbar.css";
+import { MenuData } from "./MenuData";
 import logo from "../images/logo.svg";
 import { MdOutlineNightlight } from "react-icons/md";
+import { FaBars } from "react-icons/fa";
+import { AiOutlineClose } from "react-icons/ai";
 
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [menu, setmenu] = useState(false);
+  const [clicked, setClicked] = useState(false);
+
+  const MenuHandler = () => {
+    setClicked(!clicked);
+    setmenu((prev) => !prev);
+  };
 
   const changeBackground = () => {
     if (window.scrollY >= 200) {
@@ -22,66 +31,40 @@ const Navbar = () => {
     };
   }, []);
 
-  const toggleMenu = () => {
-    setMobileMenuOpen(!mobileMenuOpen);
-  };
-
   return (
     <div className={`max-w-full ${navbar ? "sticky" : ""}`}>
-      <nav className="max-w-[90%] flex justify-between items-center mx-auto">
-        <div className="logo w-[5rem]  flex justify-center items-center text-center">
-          <img src={logo} className="object-fit" alt="Logo" />
-          <span className="pl-[1rem] text-xl">Alok</span>
+      <nav className="w-11/12 navbar-items flex flex-wrap justify-between items-center mx-auto">
+        <div className="flex gap-2  items-center text-center">
+          <img src={logo} className="w-[5rem] object-cover" />
+          <span className="font-semibold text-xl">Alok</span>
         </div>
-        <div className="flex items-center gap-6 nav-links">
-          {/* Mobile Menu Icon */}
-          <div
-            className="text-3xl md:hidden cursor-pointer"
-            onClick={toggleMenu}
-          >
-            <MdOutlineNightlight />
-          </div>
-          {/* Navigation Links */}
-          <ul
-            className={`hidden md:flex items-center gap-6 ${
-              mobileMenuOpen ? "mobile-menu-open" : ""
-            }`}
-          >
-            <li className="px-[1rem]">
-              <a href="#home">Home</a>
-            </li>
-            <li className="px-[1rem]">
-              <a href="#about">About Me</a>
-            </li>
-            <li className="px-[1rem]">
-              <a href="#project">Projects</a>
-            </li>
-          </ul>
-          {/* Contact Button */}
-          <div className="bg-textBlack text-textWhite px-[1.5rem] py-[0.6rem] rounded-md contactBtn hover:bg-highColor transition-all delay-75 ease-in">
-            <button>Contact Me</button>
+
+        <div className="flex items-center gap-4 pr-4">
+          <div className="flex items-center gap-4 pr-4">
+            <div>
+              <ul className={`flex gap-8 nav-menu ${clicked && "active"}`}>
+                {MenuData.map((item, index) => {
+                  return (
+                    <li key={index}>
+                      <a href={item.url} className={item.cName}>
+                        {item.title}
+                      </a>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+            <div className="moon text-2xl">
+              <MdOutlineNightlight />
+            </div>
+            <div className="menu-icons text-2xl">
+              <button onClick={MenuHandler} className={`bars`}>
+                {menu ? <AiOutlineClose /> : <FaBars />}
+              </button>
+            </div>
           </div>
         </div>
       </nav>
-      {/* Mobile Menu */}
-      <div
-        className={`md:hidden mobile-menu ${
-          mobileMenuOpen ? "mobile-menu-open" : ""
-        }`}
-      >
-        <ul className="flex flex-col items-center gap-4">
-          <li>
-            <a href="#home">Home</a>
-          </li>
-          <li>
-            <a href="#about">About Me</a>
-          </li>
-          <li>
-            <a href="#project">Projects</a>
-          </li>
-        </ul>
-        {/* You can add additional mobile menu items here */}
-      </div>
     </div>
   );
 };

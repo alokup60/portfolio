@@ -1,0 +1,38 @@
+@media screen and (max-width: 850px) {
+  .hero-sec {
+    display: flex;
+    flex-direction: column;
+  }
+  .text-part {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+    width: 100%;
+    /* align-items: flex-start; */
+    margin: 0 auto;
+  }
+  .draw-line {
+    display: none;
+  }
+  .hero-img {
+    width: 75%;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+  .hero-bg {
+    width: 100%;
+  }
+  .hero-img img {
+    width: 100%;
+  }
+  .social-icons {
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+  }
+  .social-icon {
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+}
